@@ -13,20 +13,47 @@ var settings = {
   });
 
 
+  //initial values 
+  var location = "";
+  var distance = 0;
+  var price = 0;
 
-  //form with three inputs -- location, distance range, price
-  //three form fields
-  //on submit button, store submissions in object  
+  //onclick event of submit button -- this event will be applied in page 1 and page 2
+  $("submit").on("click", function() {
+    event.preventDefault();
 
-  //lucky button - random array of cities 
-  //on click - random selection 
+    //grabbing user input
+    location = $("#location").val().trim();
+    distance = $("#distance").val().trim();
+    price = $("#price").val().trim();
+    
+    //add AJAX call
+
+    //output of result - into results table 
+    //need to specify results parameters as variables 
+    $("#resultsTable").append 
+
+  });
+
+  //onclick event for lucky button
+  $("lucky-submit").on("click", function() {
+    event.preventDefault();
+
+    //add AJAX call 
+
+    //output of random result - into results table 
+    //need to specify results parameters as variables 
+    $("#resultsTable").append 
+
+  });
+
+    
+
 
   //page 2
   //search results in nav bar 
   //pre-populate with input 
   //search button 
-
-  //ajax call  -
 
   //back from request 
   //fill the map (replace the anchor or image)
