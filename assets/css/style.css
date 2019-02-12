@@ -1,0 +1,47 @@
+#top{
+    background-color: rgb(248, 192, 19);
+    color: RGB(217, 0, 0);
+    border-style:solid;
+    border-color: black;
+    border-radius: 7px;
+    font-weight: bold;
+   
+
+}
+
+body{
+    background-image: url("../images/back.jpg");
+    background-repeat: repeat;
+
+}
+
+#smallButton{
+    background-color:  RGB(24, 200, 25);
+    color: RGB(217, 0, 0);
+    font-weight: 700;
+  }
+  #hugeButton{
+    background-color: RGB(24, 200, 25);
+    color: RGB(217, 0, 0);
+    font-weight: 700;
+}
+
+#middlebox{
+    background-color: RGB(217,0,0);
+    font-weight: bold;
+    /* border-style:solid;
+    border-color: black; */
+    border-radius: 7px;
+    border: 3px solid black;
+    padding: 2rem 1rem;
+    width: 87%;
+    /* margin-bottom: 2rem; */
+    /* margin: 0% -2% 0% -2%; */
+    border-radius: 0.3rem;   
+}
+
+.dropshadow{
+    -webkit-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
+box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
+}
