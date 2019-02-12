@@ -1,3 +1,16 @@
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAWaxQsuC6CYjJfPa8mWtmEBzF7ItJszck",
+    authDomain: "gimme-a-taco.firebaseapp.com",
+    databaseURL: "https://gimme-a-taco.firebaseio.com",
+    projectId: "gimme-a-taco",
+    storageBucket: "gimme-a-taco.appspot.com",
+    messagingSenderId: "547195454042"
+  };
+  firebase.initializeApp(config);
+
 
   //initial values 
   var locationInput = "";
@@ -7,6 +20,7 @@
   //onclick event of submit button on page 1 and 2
   $("#hugeButton").on("click", function(event) {
     event.preventDefault(); 
+
 
     //grabbing user input
     locationInput = $("#location").val().trim();
@@ -20,14 +34,15 @@
     //clears elements
     $("#location").val(""),
     $("#distance").val(""),
-    $("#price").val(""),
+    $("#price").val("");
 
     //add AJAX call
 
     //redirect to page 2
     //window.location.href = "page2a.html"; 
-    $(location).attr('href', 'page2a.html');
-
+    //$(location).attr('href', 'page2a.html');
+    window.location.assign("page2a.html");
+  
 
   //end onclick
   });
@@ -39,7 +54,7 @@
     //add AJAX call
 
     //redirect to page 2
-    window.location.href = "page2a.html";
+    //window.location.href = "/page2a.html";
 
   //end onclick
   });
@@ -57,6 +72,8 @@
     });
   });
 
+  //placeholder value 
+  
     //output of random result - into results table 
     //need to specify results parameters as variables 
     //$("#resultsTable").append("<tr><td>" + location + "</td><td>" + distance + "</td><td>" + price + "</td></tr>");
