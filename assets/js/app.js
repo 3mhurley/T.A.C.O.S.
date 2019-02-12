@@ -36,14 +36,16 @@ $.ajax({
 });
 
 // Google Map with Geolocation
+// -Declare vars and initialize function
 var map, infoWindow;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 12
+        center: {lat: -34.397, lng: 150.644}, // Sydney
+        zoom: 12 // default zoom to local area <5mi
     });
 infoWindow = new google.maps.InfoWindow;
 
+// -Geocode current position
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
         var pos = {
@@ -51,19 +53,19 @@ if (navigator.geolocation) {
             lng: position.coords.longitude
         };
 
-        infoWindow.setPosition(pos);
+        infoWindow.setPosition(pos); // set position of infoWindow on geocode
         infoWindow.setContent('Location found.');
         infoWindow.open(map);
-        map.setCenter(pos);
+        map.setCenter(pos); // center map
     }, function() {
         handleLocationError(true, infoWindow, map.getCenter());
     });
     } else {
-        // Browser doesn't support Geolocation
+        // --If browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
 }
-
+// -Error handling
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
