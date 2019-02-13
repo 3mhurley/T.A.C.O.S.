@@ -73,91 +73,91 @@
 //                           'Error: Your browser doesn\'t support geolocation.');
 //     infoWindow.open(map);
 // }
-// Object
-var taco = {
-    map: 'taco.com',
-    foursquare_clientID: 'D0HCALZZRSU3MQSBUY0E1AS4PKXFOIPTIO5UP11JMKEN3YSJ',
-    foursquare_clientSecret: 'PGOTQALEY5RLYXXTV0XRG3WOU3MFT52BXJLPUC232LONJ3FM',
-}
+// // Object
+// var taco = {
+//     map: 'taco.com',
+//     foursquare_clientID: 'D0HCALZZRSU3MQSBUY0E1AS4PKXFOIPTIO5UP11JMKEN3YSJ',
+//     foursquare_clientSecret: 'PGOTQALEY5RLYXXTV0XRG3WOU3MFT52BXJLPUC232LONJ3FM',
+// }
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-"https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-var mapURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap&region=US"
+// "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+// var mapURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap&region=US"
 
-function initMap() {
-    var map = new google.maps.Map(mapURL, {
-        zoom: 8,
-        center: {lat: 35.717, lng: 139.731}
-    });
-}
+// function initMap() {
+//     var map = new google.maps.Map(mapURL, {
+//         zoom: 8,
+//         center: {lat: 35.717, lng: 139.731}
+//     });
+// }
 
-// Aye, Jacks! 4 Square ahead! Yar
-var city = 'Denver, CO' //&near=Denver, CO
-var address = '1701 WYNKOOP DENVER, CO 80202' // Union
-var now = '20190212' //&v=YYYYMMDD
-var location = '39.7,105.0' //&ll=40.7,-74
-var query = 'tacos'
-var queryURL = 'https://api.foursquare.com/v2/venues/search?'
-    // + 'll=' + location;
-    + 'near=' + city
-    + '&intent=' + 'checkin'
-    + '&radius=' + '50'
-    + '&query=' + query
-    + '&limit=' + '10'
-    + '&client_id=' + taco.foursquare_clientID
-    + '&client_secret=' + taco.foursquare_clientSecret
-    + '&v=' + now;
-console.log(queryURL);
+// // Aye, Jacks! 4 Square ahead! Yar
+// var city = 'Denver, CO' //&near=Denver, CO
+// var address = '1701 WYNKOOP DENVER, CO 80202' // Union
+// var now = '20190212' //&v=YYYYMMDD
+// var location = '39.7,105.0' //&ll=40.7,-74
+// var query = 'tacos'
+// var queryURL = 'https://api.foursquare.com/v2/venues/search?'
+//     // + 'll=' + location;
+//     + 'near=' + city
+//     + '&intent=' + 'checkin'
+//     + '&radius=' + '50'
+//     + '&query=' + query
+//     + '&limit=' + '10'
+//     + '&client_id=' + taco.foursquare_clientID
+//     + '&client_secret=' + taco.foursquare_clientSecret
+//     + '&v=' + now;
+// console.log(queryURL);
 
-$.ajax({
-    url: queryURL,
-    method: "GET",
-}).then(function(response) {
-    console.log(response);
+// $.ajax({
+//     url: queryURL,
+//     method: "GET",
+// }).then(function(response) {
+//     console.log(response);
 
-});
+// });
 
-});
+// });
 
-// Google Map with Geolocation
-// -Declare vars and initialize function
-var map, infoWindow;
-function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644}, // Sydney
-        zoom: 12 // default zoom to local area <5mi
-    });
-infoWindow = new google.maps.InfoWindow;
+// // Google Map with Geolocation
+// // -Declare vars and initialize function
+// var map, infoWindow;
+// function initMap() {
+//     map = new google.maps.Map(document.getElementById('map'), {
+//         center: {lat: -34.397, lng: 150.644}, // Sydney
+//         zoom: 12 // default zoom to local area <5mi
+//     });
+// infoWindow = new google.maps.InfoWindow;
 
-// -Geocode current position
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-        };
+// // -Geocode current position
+// if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//         var pos = {
+//             lat: position.coords.latitude,
+//             lng: position.coords.longitude
+//         };
 
-        infoWindow.setPosition(pos); // set position of infoWindow on geocode
-        infoWindow.setContent('Location found.');
-        infoWindow.open(map);
-        map.setCenter(pos); // center map
-    }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
-    });
-    } else {
-        // --If browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-    }
-}
-// -Error handling
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-                          'Error: The Geolocation service failed.' :
-                          'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
-}
+//         infoWindow.setPosition(pos); // set position of infoWindow on geocode
+//         infoWindow.setContent('Location found.');
+//         infoWindow.open(map);
+//         map.setCenter(pos); // center map
+//     }, function() {
+//         handleLocationError(true, infoWindow, map.getCenter());
+//     });
+//     } else {
+//         // --If browser doesn't support Geolocation
+//         handleLocationError(false, infoWindow, map.getCenter());
+//     }
+// }
+// // -Error handling
+// function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+//     infoWindow.setPosition(pos);
+//     infoWindow.setContent(browserHasGeolocation ?
+//                           'Error: The Geolocation service failed.' :
+//                           'Error: Your browser doesn\'t support geolocation.');
+//     infoWindow.open(map);
+// }
 
 
 
@@ -192,11 +192,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     console.log(distanceInput);
     console.log(priceInput);
 
-    // //clears elements
-    // $("#location").val(""),
-    // $("#distance").val(""),
-    // $("#price").val("");
-
     //taco location info for firebase
     var newTaco = {
       fireLocation: locationInput,
@@ -207,27 +202,27 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     //push to firebase
     dataRef.ref().push(newTaco);
 
+    //clears elements
+    $("#location").val(""),
+    $("#distance").val(""),
+    $("#price").val("");
+
     //add AJAX call function
 
     //redirect to page 2
     $(location).attr('href', 'page2a.html');
-    //window.location.assign("page2a.html");
-    //window.location.href = "page2a.html"; 
-  
 
   //end onclick
   });
 
-  //onclick lucky button - random location
+  //onclick lucky button - random location - no user input 
   $("#smallButton").on("click", function(event) {
     event.preventDefault(); 
-
-    //no user input necessary 
 
     //add AJAX call function
 
     //redirect to page 2 
-    //window.location.href = "/page2a.html";
+    $(location).attr('href', 'page2a.html');
 
   //end onclick
   });
@@ -235,31 +230,19 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   //firebase watcher + initial loader
   dataRef.ref().on("child_added", function(childSnapshot) {
 
-    var fireLocation = childSnapshot.val().locationInput;
+    var fireLocation = "string";
     var fireDistance = childSnapshot.val().distanceInput;
     var firePrice = childSnapshot.val().priceInput;
 
-    //output of result - into results table 
-    //need to specify results parameters as variables 
-    $("#resultsTable").append("<tr><td>" + fireLocation + "</td><td>" + fireDistance + "</td><td>" + firePrice + "</td></tr>");
+//     use page 1 form input as placeholder in page 2 form
+    $("#location").attr("placeholder", fireLocation);
+    $("#distance").attr("placeholder", fireDistance);
+    $("#price").attr("placeholder", firePrice);
 
 
-  });
+});
 
   
-
-  //pre-populate page 1 user input into page 2 user input
-  //NOT FUNCTIONAL 
-  // $(document).ready(function(autofill) {
-  //   $("hugeButton").click(function() {
-  //     $("#location").val().trim();
-  //   });
-  // });
-
-  //placeholder value -pre-populate with input 
-  
-  //output of random result - into results table 
-    
   //search results in nav bar 
   
   
