@@ -18,11 +18,21 @@ function initMap() {
 }
 
 // Aye, Jacks! 4 Square ahead! Yar
-var city = 'near=' + 'Denver, CO';
+var city = 'Denver, CO' //&near=Denver, CO
 var address = '1701 WYNKOOP DENVER, CO 80202' // Union
-var location;
-var query = 'query=' + 'tacos'
-var queryURL = 'https://api.foursquare.com/v2/venues/search?' + 'client_id=' + taco.foursquare_clientID + '&client_secret=' + taco.foursquare_clientSecret + '&intent=checkin' + '&' + query + '&' + city + '&radius=50' + '&limit=10';
+var now = '20190212' //&v=YYYYMMDD
+var location = '39.7,105.0' //&ll=40.7,-74
+var query = 'tacos'
+var queryURL = 'https://api.foursquare.com/v2/venues/search?'
+    // + 'll=' + location;
+    + 'near=' + city
+    + '&intent=' + 'checkin'
+    + '&radius=' + '50'
+    + '&query=' + query
+    + '&limit=' + '10'
+    + '&client_id=' + taco.foursquare_clientID
+    + '&client_secret=' + taco.foursquare_clientSecret
+    + '&v=' + now;
 console.log(queryURL);
 
 $.ajax({
@@ -73,7 +83,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                           'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
 }
-<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+
 
   // Initialize Firebase
   var config = {
