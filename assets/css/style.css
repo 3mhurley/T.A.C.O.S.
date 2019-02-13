@@ -4,12 +4,13 @@
     border-style:solid;
     border-color: black;
     border-radius: 7px;
+    font-weight: bold;
    
 
 }
 
 body{
-    background-image: url("../images/back.jpg");
+    background-image: url("../images/back.jpg"); 
     background-repeat: repeat;
 
 }
