@@ -1,4 +1,3 @@
-<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 
   // Initialize Firebase
   var config = {
@@ -10,6 +9,8 @@
     messagingSenderId: "547195454042"
   };
   firebase.initializeApp(config);
+
+  var dataRef = firebase.database();
 
 
   //initial values 
@@ -36,6 +37,16 @@
     $("#distance").val(""),
     $("#price").val("");
 
+    //taco location info for firebase
+    var newTaco = {
+      locationInput: locationInput,
+      distanceInput: distanceInput,
+      priceInput: priceInput,
+    };
+
+    //push to firebase
+    dataRef.ref().push(newTaco);
+
     //add AJAX call
 
     //redirect to page 2
@@ -51,6 +62,8 @@
   $("#smallButton").on("click", function(event) {
     event.preventDefault(); 
 
+    //no user input necessary 
+
     //add AJAX call
 
     //redirect to page 2
@@ -59,10 +72,21 @@
   //end onclick
   });
 
+  //firebase watcher + initial loader
+  dataRef.ref().on("child_added", function(childSnapshot) {
 
-  //output of result - into results table 
-  //need to specify results parameters as variables 
+    var fireLocation = childSnapshot.val().locationInput;
+    var fireDistance = childSnapshot.val().distanceInput;
+    var firePrice = childSnapshot.val().priceInput;
+
+    //output of result - into results table 
+    //need to specify results parameters as variables 
     $("#resultsTable").append("<tr><td>" + locationInput + "</td><td>" + distanceInput + "</td><td>" + priceInput + "</td></tr>");
+
+
+  });
+
+  
 
   //pre-populate page 1 user input into page 2 user input
   //NOT FUNCTIONAL 
@@ -72,22 +96,13 @@
     });
   });
 
-  //placeholder value 
+  //placeholder value -pre-populate with input 
   
     //output of random result - into results table 
-    //need to specify results parameters as variables 
-    //$("#resultsTable").append("<tr><td>" + location + "</td><td>" + distance + "</td><td>" + price + "</td></tr>");
+    
 
 
 
   //page 2
   //search results in nav bar 
-  //pre-populate with input 
-  //search button 
-
-  //back from request 
-  //fill the map (replace the anchor or image)
-  //store the response in the card
-  //dynamically append with additional data 
-
-  //on click card - dynamically create the nav bar 
+  
