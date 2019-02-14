@@ -17,6 +17,7 @@
     font-weight: 900;
     font-size: 4.5em;
   }
+
   .ml4 .letters {
     position: absolute;
     margin: auto;
@@ -26,6 +27,12 @@
     opacity: 0; 
   }
   /*END OF ANIME*/
+
+  /*sidebar*/
+  
+/* The side navigation menu */
+
+/*end of sidebar*/
 
 body{
     background-image: url("../images/back.jpg"); 

@@ -12,11 +12,62 @@
     <!--firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
     
+<!--style sidebar-->
+  <style>
+  
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+  </style>
+<!--end of style sidebar-->
+
     </head>
     <body>
         
+          
+          <div class="container">
 
-        <div class="container">
                 <!-- nav bar -->
                 <nav class="navbar navbar-light bg-light">
                     <form class="form-inline">
@@ -37,6 +88,21 @@
             </div> 
             <!-- table -->
             <br>
+            
+            <!--sidebar-->
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+                <a href="#">Info</a>
+                <a href="#">About</a>
+                <a href="#">Taco</a>
+                <a href="#">Venues</a>
+              </div>
+              
+          <!--sidebar end-->
+           
+            
             <br>
             <div class="row" >
             <!-- table -->
@@ -63,7 +129,7 @@
                                             <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                                             <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                             <!--sidebar button toggle-->
-                                            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle <a href="https://www.jqueryscript.net/menu/">Menu</a></a>
+                                            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TACOS</span>
                                           </div>
                                         </div>
                               
@@ -89,6 +155,10 @@
           
            
         </div> <!-- container-->
+
+        <!--end of sidebar div-->
+      </div>
+
         <!--link to JS-->
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfQ3fFasbNNaSb6Y8SSK16iDsh4_rvvRU&callback=initMap"></script>
         <script src="assets/js/app.js"></script>
