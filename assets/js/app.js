@@ -1,4 +1,4 @@
-//ANIME 
+//title anime  
 var ml4 = {};
 ml4.opacityIn = [0,1];
 ml4.scaleIn = [0.2, 1];
@@ -50,11 +50,9 @@ anime.timeline({loop: true})
     duration: 500,
     delay: 500
   });
-
-//END OF ANIME
+//end of anime
 
 //sidebar
-
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
@@ -64,7 +62,6 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
-
 //end of sidebar
 
 
@@ -312,7 +309,5 @@ function closeNav() {
 
 });
 
-  
-  //search results in nav bar 
-  
+    
   
