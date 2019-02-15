@@ -22,17 +22,17 @@
     position: absolute;
     margin: auto;
     left: 0;
-    top: 0.3em;
+    top: -0.7em;
     right: 0;
     opacity: 0; 
   }
   /*END OF ANIME*/
 
-body{
-
+  body{
     background-image: url("../images/g.jpg");
-    background-repeat: repeat;
-    background-color: lightblue;
+    background-position: 100%, 0%;
+    
+    
 
 }
 
