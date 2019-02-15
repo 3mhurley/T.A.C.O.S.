@@ -69,73 +69,80 @@
   <!--end of style sidebar-->
 
 </head>
+
 <body>
-        
-  
 
-    <div class="container">
 
-      <!-- nav bar -->
-      <nav class="navbar navbar-light bg-light">
-          <form class="form-inline">
-              <input class="form-control mr-5 ml-5 input1 input2" id="location" type="text" placeholder="" aria-label="Search">
-              <input class="form-control mr-5 ml-5" id="distance" type="text" placeholder="" aria-label="Search">
-              <input class="form-control mr-5 ml-5" id="price" type="text" placeholder="" aria-label="Search">
-              <button class="btn btn-secondary  my-2 my-sm-0" id="hugeButton" type="button" >Submit</button>
-          </form>
-      </nav>
-          
-    <br>
-          
-    <!--column 1 using grid-->
-    <div class="container">
+
+  <div class="container">
+
+    <!-- nav bar -->
     <div class="row">
+      <nav class="navbar navbar-dark" id="yellow_nav">
+        <form class="form-inline">
+          <input class="form-control mr-5 ml-5 input1 input2" id="location" type="text" placeholder="" aria-label="Search">
+          <input class="form-control mr-5 ml-5" id="distance" type="text" placeholder="" aria-label="Search">
+          <input class="form-control mr-5 ml-5" id="price" type="text" placeholder="" aria-label="Search">
+          <button class="btn btn-secondary  my-2 my-sm-0" id="hugeButton" type="button">Submit</button>
+        </form>
+      </nav>
+    </div>
+    <br>
+
+    <!--column 1 using grid-->
+    <!-- <div class="container"> -->
+      <div class="row">
         <div class="col-10">
 
-    <!-- google map -->
-    <div class="col-md-12 text-center" style="height:250px;width:500px;">
-        <div id="map" style="height:100%;"></div>
-    </div> 
-      
-    <br>
-      
-    <!--sidebar-->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
-        <a href="#">Info</a>
-        <a href="#">About</a>
-        <a href="#">Taco</a>
-        <a href="#">Venues</a>
-    </div>
-    <!--sidebar end-->
-    
-    <br>
+          <!-- google map -->
+          <div class="col-md-12 text-center" style="height:250px;width:500px;">
+            <div id="map" style="height:100%;"></div>
+          </div>
 
-    <div class="row" >
-    <!-- table -->
-      <div class="col-md-9 text-center border">
-          <table class="table table-hover" id="resultsTable">
-              <thead>
-                <tr>
-                  <th scope="col">Nearest TACOS</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <section>
-                      <div class="container py-3">
-                        <div class="card">
-                          <div class="row ">
-                            <div class="col-md-4">
-                                <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100">
+          <br>
+
+          <!--sidebar-->
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+            <a href="#">Info</a>
+            <a href="#">About</a>
+            <a href="#">Taco</a>
+            <a href="#">Venues</a>
+          </div>
+          <!--sidebar end-->
+
+          <br>
+
+          <div class="row">
+            <!-- table -->
+            <div class="col-md-9 text-center border">
+              <table class="table table-hover" id="resultsTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Nearest TACOS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <section>
+                        <div class="container py-3">
+                          <div class="card">
+                            <div class="row ">
+                              <div class="col-md-4">
+                                <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400"
+                                  class="w-100">
                               </div>
                               <div class="col-md-8 px-3">
                                 <div class="card-block px-3">
                                   <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
-                                  <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                                  <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                  <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                  <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                   <!--sidebar button toggle-->
                                   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TACOS</span>
                                 </div>
@@ -143,32 +150,33 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </section>
-                  </th>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
+            </div>
+            </section>
+            </th>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
             </table>
-        </div><!-- row"-->
+          </div><!-- row"-->
+        </div>
+
+        <!--end of column 1-->
       </div>
 
-<!--end of column 1-->
-</div>
-                
-                
-                
-<!--column 2 blank space for background image-->
-<div class="col-2">        
-</div>
-<!--end of column 2-->
 
-        <!--link to JS-->
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfQ3fFasbNNaSb6Y8SSK16iDsh4_rvvRU&callback=initMap"></script>
-      <script src="assets/js/app.js"></script>
+
+      <!--column 2 blank space for background image-->
+      <div class="col-2">
+      </div>
+      <!--end of column 2-->
+    <!-- </div> -->
+    <!--link to JS-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfQ3fFasbNNaSb6Y8SSK16iDsh4_rvvRU&callback=initMap"></script>
+    <script src="assets/js/app.js"></script>
 </body>
+
 </html>

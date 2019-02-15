@@ -1,7 +1,8 @@
 body{
 	
-    background-image: url("../images/g.jpg");
-    background-position: 100%, 0%;
+    background: url("../images/g.jpg");
+    /* background-position: 100%; */
+    background-size: 1600px, 900px;
     
 
 }
@@ -10,6 +11,12 @@ body{
     background-color: rgba(238, 238, 90, 0.856);
 
 }
+
+#yellow_nav{
+    background-color: rgba(238, 238, 90, 0.856);
+
+}
+
 
 /* .col-md-12.text-center.border{
     background-color:rgb(235, 96, 96);
