@@ -5,16 +5,28 @@
     border-color: black;
     border-radius: 7px;
     font-weight: bold;
-    opacity: 0.9;
-    font-style: oblique;
-    
-   
-
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.display-4{
-    animation-direction: normal;
-}
+/*ANIME*/
+.ml4 {
+    position: relative;
+    font-weight: 900;
+    font-size: 4.5em;
+  }
+
+  .ml4 .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0.3em;
+    right: 0;
+    opacity: 0; 
+  }
+  /*END OF ANIME*/
 
 body{
 
