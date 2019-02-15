@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!--jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!--firebase-->
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-    </head>
-    <body>
-        
-        <div class="container">
-                <!-- nav bar -->
-                <nav class="navbar navbar-light bg-light">
-                    <form class="form-inline">
-                        <input class="form-control mr-5 ml-5" id="location" type="text" placeholder="" aria-label="Search">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="assets/css/map.css">
+
+  <!-- link favicon -->
+
+  <link rel="icon" href="./assets/images/favicon.ico">
+  <!--firebase-->
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- nav bar -->
+    <nav id="nav" class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <input class="form-control mr-5 ml-5" type="text" placeholder="Location" aria-label="Search">
+        <input class="form-control mr-5 ml-5" type="text" placeholder="Distance" aria-label="Search">
+        <input class="form-control mr-5 ml-5" type="text" placeholder="Price" aria-label="Search">
+        <button class="btn btn-secondary  my-2 my-sm-0" type="button">Submit</button>
+        <!-- <input class="form-control mr-5 ml-5" id="location" type="text" placeholder="" aria-label="Search">
                         <input class="form-control mr-5 ml-5" id="distance" type="text" placeholder="" aria-label="Search">
                         <input class="form-control mr-5 ml-5" id="price" type="text" placeholder="" aria-label="Search">
                         
-                        <button class="btn btn-secondary  my-2 my-sm-0" id="hugeButton" type="button" >Submit</button>
-                    </form>
-                </nav>
-                <br>
-                <br>
+                        <button class="btn btn-secondary  my-2 my-sm-0" id="hugeButton" type="button" >Submit</button> -->
+      </form>
+    </nav>
+    <br>
+    <br>
 
             <!-- google map -->
             <div class="col-md-12 text-center" style="height:250px;width:500px;">
@@ -61,20 +74,19 @@
                         </tbody>
                       </table>
                 </div>
-                
 
-                
-                        <!-- <img src="..." class="rounded float-left border" alt="" width="255" height="255">
+
+      <!-- <img src="..." class="rounded float-left border" alt="" width="255" height="255">
                 <div class="col-sm-3 ml-4 ">
                         <img src="..." class="rounded float-left border" alt="" width="255" height="255">
                     </div> -->
-                    <!-- <div class="col-sm-2 rounded float-left border" width="255" height="255">
+      <!-- <div class="col-sm-2 rounded float-left border" width="255" height="255">
 
                     </div> -->
-            </div> <!-- row"-->
+    </div> <!-- row"-->
 
 
-            <!-- <Div >
+    <!-- <Div >
                 <table class="table">
                 <img src="..." alt="..." class="img-thumbnail">
                 </table>
