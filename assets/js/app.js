@@ -161,11 +161,11 @@ var taco = {
 var city = 'Denver, CO'; //&near=Denver, CO
 var address = '1701 WYNKOOP DENVER, CO 80202'; // Union
 var now = '20190212'; //&v=YYYYMMDD
-var location = '39.7,105.0'; //&ll=40.7,-74
+var qLocation = '39.7,105.0'; //&ll=40.7,-74
 var query = 'tacos';
-var price = '1,2,3,4';
+var qPrice = '1,2,3,4';
 var queryURL = 'https://api.foursquare.com/v2/venues/explore?'
-    // + 'll=' + location;
+    // + 'll=' + qLocation;
     + 'near=' + city
     + '&radius=' + '5000'
     // + '&section=' + 'Taco Place' // Taco Place
@@ -173,7 +173,7 @@ var queryURL = 'https://api.foursquare.com/v2/venues/explore?'
     + '&limit=' + '10'
     + '&openNow=' + '1'
     + '&sortByDistance=' + '1'
-    + '&price=' + price
+    + '&price=' + qPrice
     + '&client_id=' + taco.foursquare_clientID
     + '&client_secret=' + taco.foursquare_clientSecret
     + '&v=' + now;
