@@ -146,5 +146,72 @@ function closeNav() {
 
 });
 
-    
-  
+// EHHHHHHHHHHH
+
+// Object
+var taco = {
+    map: 'taco.com',
+    foursquare_clientID: 'D0HCALZZRSU3MQSBUY0E1AS4PKXFOIPTIO5UP11JMKEN3YSJ',
+    foursquare_clientSecret: 'PGOTQALEY5RLYXXTV0XRG3WOU3MFT52BXJLPUC232LONJ3FM',
+    gcp_jma_key: 'AIzaSyAfQ3fFasbNNaSb6Y8SSK16iDsh4_rvvRU',
+    pos: [],
+}
+
+// Aye, Jacks! 4 Square ahead! Yar
+var city = 'Denver, CO'; //&near=Denver, CO
+var address = '1701 WYNKOOP DENVER, CO 80202'; // Union
+var now = '20190212'; //&v=YYYYMMDD
+var qLocation = '39.7,105.0'; //&ll=40.7,-74
+var query = 'tacos';
+var qPrice = '1,2,3,4';
+var queryURL = 'https://api.foursquare.com/v2/venues/explore?'
+    // + 'll=' + qLocation;
+    + 'near=' + city
+    + '&radius=' + '5000'
+    // + '&section=' + 'Taco Place' // Taco Place
+    + '&query=' + query
+    + '&limit=' + '10'
+    + '&openNow=' + '1'
+    + '&sortByDistance=' + '1'
+    + '&price=' + qPrice
+    + '&client_id=' + taco.foursquare_clientID
+    + '&client_secret=' + taco.foursquare_clientSecret
+    + '&v=' + now;
+console.log(queryURL);
+
+function getList(val) {
+  var queryURL = val
+  $.ajax({
+      url: queryURL,
+      method: "GET",
+  }).then(function(rsp) {
+      console.log(rsp.response);
+      console.log(rsp.response.groups[0].items[0].venue.id);
+      getDeets(rsp.response.groups[0].items[0].venue.id);
+  });
+}
+
+function getDeets(val) {
+
+  var venueID = val;
+  var queryURL = 'https://api.foursquare.com/v2/venues/'
+    + venueID + '?'
+    + '&client_id=' + taco.foursquare_clientID
+    + '&client_secret=' + taco.foursquare_clientSecret
+    + '&v=' + now;
+  $.ajax({
+      url: queryURL,
+      method: "GET",
+  }).then(function(rsp) {
+      console.log(rsp.response.venue);
+      console.log(rsp.response.venue.name);
+      console.log(rsp.response.venue.attributes.groups[0].summary);
+      console.log(rsp.response.venue.contact.formattedPhone);
+      console.log(rsp.response.venue.url);
+      console.log(rsp.response.venue.rating);
+      console.log(rsp.response.venue.description);
+  });
+}
+getList(queryURL);
+
+// Map
