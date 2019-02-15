@@ -1,6 +1,8 @@
 body{
-    background-image: url("../images/back2.jpg"); 
-    background-repeat: repeat;
+	
+    background-image: url("../images/g.jpg");
+    background-position: 100%, 0%;
+    
 
 }
 
@@ -9,13 +11,23 @@ body{
 
 }
 
-.col-md-12.text-center.border{
+/* .col-md-12.text-center.border{
+    background-color:rgb(235, 96, 96);
+    opacity: 0.9;
+    color: whitesmoke;
+    font-weight: 900;
+    font-style: oblique;
+} */
+
+.col-md-9.text-center.border
+{
     background-color:rgb(235, 96, 96);
     opacity: 0.9;
     color: whitesmoke;
     font-weight: 900;
     font-style: oblique;
 }
+
 
 button.btn.btn-secondary.my-2.my-sm-0{
     /* margin-left: 60px; */
