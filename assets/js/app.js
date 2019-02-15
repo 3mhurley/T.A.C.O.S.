@@ -9,7 +9,7 @@ var taco = {
 
 // LOCATION LOCATION LOCATION
 function getLocation(callback) {
-  var promise = new Promise(function(resolve, reject) {
+  return new Promise(function(resolve, reject) {
       if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(
               function(position){
@@ -20,8 +20,6 @@ function getLocation(callback) {
         reject("Unknown");
       }
   });
-
-  return promise;
 }
 
 
@@ -122,10 +120,73 @@ function getDeets(val) {
       console.log(rsp.response.venue.description);
   });
 }
+});
+//title anime  
+var ml4 = {};
+ml4.opacityIn = [0,1];
+ml4.scaleIn = [0.2, 1];
+ml4.scaleOut = 3;
+ml4.durationIn = 800;
+ml4.durationOut = 600;
+ml4.delay = 500;
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml4 .letters-1',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-1',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4',
+    opacity: 0,
+    duration: 500,
+    delay: 500
+  });
+//end of anime
+
+//sidebar
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
 
 getList(queryURL);
-
-}); // Close document.ready
 
 
   // Initialize Firebase
@@ -139,6 +200,7 @@ getList(queryURL);
   };
   firebase.initializeApp(config);
 
+  var dataRef = firebase.database();
 
   //initial values 
   var locationInput = "";
@@ -149,7 +211,6 @@ getList(queryURL);
   $("#hugeButton").on("click", function(event) {
     event.preventDefault(); 
 
-
     //grabbing user input
     locationInput = $("#location").val().trim();
     distanceInput = $("#distance").val().trim();
@@ -159,63 +220,52 @@ getList(queryURL);
     console.log(distanceInput);
     console.log(priceInput);
 
+    //taco location info for firebase
+    var newTaco = {
+      fireLocation: locationInput,
+      fireDistance: distanceInput,
+      firePrice: priceInput,
+    };
+
+    //push to firebase
+    dataRef.ref().push(newTaco);
+
     //clears elements
     $("#location").val(""),
     $("#distance").val(""),
     $("#price").val("");
 
-    //add AJAX call
+    //add AJAX call function
 
     //redirect to page 2
-    //window.location.href = "page2a.html"; 
-    //$(location).attr('href', 'page2a.html');
-    window.location.assign("page2a.html");
-  
+    $(location).attr('href', 'page2a.html');
 
   //end onclick
   });
 
-  //onclick lucky button - random location
+  //onclick lucky button - random location - no user input 
   $("#smallButton").on("click", function(event) {
     event.preventDefault(); 
 
-    //add AJAX call
+    //add AJAX call function
 
-    //redirect to page 2
-    //window.location.href = "/page2a.html";
+    //redirect to page 2 
+    $(location).attr('href', 'page2a.html');
 
   //end onclick
   });
 
+  //firebase watcher + initial loader
+  dataRef.ref().on("child_added", function(childSnapshot) {
 
-  //output of result - into results table 
-  //need to specify results parameters as variables 
-    $("#resultsTable").append("<tr><td>" + locationInput + "</td><td>" + distanceInput + "</td><td>" + priceInput + "</td></tr>");
+    var fireLocation = "string";
+    var fireDistance = childSnapshot.val().distanceInput;
+    var firePrice = childSnapshot.val().priceInput;
 
-  //pre-populate page 1 user input into page 2 user input
-  //NOT FUNCTIONAL 
-  $(document).ready(function(autofill) {
-    $("hugeButton").click(function() {
-      $("#location").val().trim();
-    });
-  });
-
-  //placeholder value 
-  
-    //output of random result - into results table 
-    //need to specify results parameters as variables 
-    //$("#resultsTable").append("<tr><td>" + location + "</td><td>" + distance + "</td><td>" + price + "</td></tr>");
+//     use page 1 form input as placeholder in page 2 form
+    $("#location").attr("placeholder", fireLocation);
+    $("#distance").attr("placeholder", fireDistance);
+    $("#price").attr("placeholder", firePrice);
 
 
-
-  //page 2
-  //search results in nav bar 
-  //pre-populate with input 
-  //search button 
-
-  //back from request 
-  //fill the map (replace the anchor or image)
-  //store the response in the card
-  //dynamically append with additional data 
-
-  //on click card - dynamically create the nav bar 
+});
