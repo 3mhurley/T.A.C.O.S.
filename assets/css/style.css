@@ -16,7 +16,7 @@
 	width: 850px;
 	margin-top: 60px;
 	margin-bottom: 60px;
-	padding-top: 40px;
+	padding-top: 25px;
 	padding-bottom: 40px;
 	background-color:#DCDCDC;
 	border-style:solid;
@@ -43,6 +43,7 @@
 	top: -0.7em;
 	right: 0;
 	opacity: 0; 
+	color: #ea1535;
 } 
 /*end of anime*/
 
@@ -51,6 +52,17 @@ body{
 	background-position: 100%, 0%;
 }
 
+#form-row {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+#guac {
+	font-size: 50px;
+	color: #ea1535;
+	font-weight: bold;
+	text-align: center;
+}
 
 #smallButton{
 	background-color: black;
@@ -65,60 +77,4 @@ body{
 	margin-bottom: 30px;
 	margin-top: 15px;
 } 
-
-/* #middlebox{
-	background-color: #F8F8FF (248,248,255);
-	color: #F8F8FF (248,248,255);
-	font-weight: bold;
-	border-radius: 3px;
-	border: 3px solid black;
-	padding: 2rem 1rem;
-	width: 87%;
-	border-radius: 0.3rem;  
-	opacity: 0.8; 
-} */
-
-/* .dropshadow{
-	-webkit-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
--moz-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
-} */
-
-/* #cont{ background-color: RGB(217,0,0);
-	font-weight: bold;
-	/* border-style:solid;
-	border-color: black; */
-	/* border-radius: 7px;
-	border: 3px solid black;
-	padding: 2rem 1rem;
-	width: 87%; */
-	/* margin-bottom: 2rem; */
-	/* margin: 0% -2% 0% -2%; */
-
-/* } */ 
-
-/* #midsection{  background-color: rgb(248, 192, 19);
-	color: RGB(217, 0, 0);
-	border-style:solid;
-	border-color: black;
-	border-radius: 7px;
-	font-weight: bold;
-	font-style: oblique;
-
-} */
-
-/* #b{
-	background-color:  RGB(24, 200, 25);
-	color: RGB(217, 0, 0);
-	font-weight: 700;
-	border-style:solid;
-	border-color: black;
-	border-radius: 7px;
-	width: 250px;
-	height: 250px;
-	font-style: oblique;
-
-} */
-
-
 

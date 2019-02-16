@@ -51,7 +51,7 @@
                             
                             <!-- lucky button -->
                             <div class="col-md-12 text-center">
-                                <button type="button" class="btn btn-secondary" id="smallButton">Gimme a Random TACO!</button>
+                                <button type="button" class="btn btn-secondary btn-md" id="smallButton">Gimme a Random TACO!</button>
                             </div>
                             
                             <br>
@@ -59,38 +59,33 @@
                             <!-- text field with user validation--> 
 
                             
-                            <form class="needs-validation" novalidate>
-                                <div class="form-row">
+                            <form class="needs-validation" novalidate action="page2a.html">
+                                <div class="form-row" id="form-row">
                                     <div class="col-md-4 mb-3">
                                         <label for="validationCustom01">Current Location</label>
-                                        <input type="text" class="form-control" id="validationCustom01" placeholder="Current Location" value="" required>
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                        </div>
+                                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                        <label for="validationCustom02">Radius</label>
-                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Current Location" value="" required>
-                                        <div class="invalid-feedback">
-                                                Please choose a username.
-                                              </div>
+                                        <label for="validationCustom02">How far will you go for a taco?</label>
+                                        <input type="number" class="form-control" id="validationCustom02" value="" required>
+                                        <div class="invalid-feedback"></div>
+                                            
+                                              
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                        <label for="validationCustom03">Price</label>
-                                        <input type="text" class="form-control" id="validationCustom01" placeholder="Price $-$$$" value="" required>
-                                        <div class="invalid-feedback">
-                                            Please choose a username.
-                                        </div>
+                                        <label for="validationCustom03">Price Range $-$$$</label>
+                                        <input type="text" class="form-control" id="validationCustom03" value="" required>
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                 </div>
                                     <div class="col-md-12 text-center">
-                                        <button type="submit" class="btn btn-secondary" id="hugeButton">Nearest TACO!</button>
+                                        <button type="submit" class="btn btn-secondary btn-lg" id="hugeButton">Nearest TACO!</button>
                                     </div>
                                 </form>
                             <br>
                             
                         </div>  
-                        
                         <div class="bottom_container">
                         </div>
                     </div>

@@ -95,67 +95,33 @@ function closeNav() {
           if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
-          } else
-          form.classList.add('was-validated');
-          window.location="page2a.html";
-          
-        
+            form.classList.add('was-validated');
+            $("form").append('<p id="guac">HOLY GUACAMOLE! Fill out the form to find a taco!</p>');
+            
+          } else {
+            
+          }
         }, false);
-        
       });
-      
     }, false);
-    
   })();
- 
-
-
-
-  //onclick event of submit button on page 1 and 2
-  // $("#hugeButton").on("click", function(event) {
-  //   event.preventDefault(); 
-
-    // //grabbing user input
-    // locationInput = $("#location").val().trim();
-    // distanceInput = $("#distance").val().trim();
-    // priceInput = $("#price").val().trim();
-
-    // console.log(locationInput);
-    // console.log(distanceInput);
-    // console.log(priceInput);
-
-    // //taco location info for firebase
-    // var newTaco = {
-    //   fireLocation: locationInput,
-    //   fireDistance: distanceInput,
-    //   firePrice: priceInput,
-    // };
-
-    // //push to firebase
-    // dataRef.ref().push(newTaco);
-
-    // //clears elements
-    // $("#location").val(""),
-    // $("#distance").val(""),
-    // $("#price").val("");
-
-    // //add AJAX call function
-
-    // //redirect to page 2
-    // $(location).attr('href', 'page2a.html');
-
-  //end onclick
-  //});
 
   //onclick lucky button - random location - no user input 
   $("#smallButton").on("click", function(event) {
     event.preventDefault(); 
 
-    //add AJAX call function
-
     //redirect to page 2 
     $(location).attr('href', 'page2a.html');
 
+  //end onclick
+  });
+ 
+  //clears elements
+  $("#hugeButton").on("click", function(event) {
+    event.preventDefault(); 
+      $("#validationCustom01").val(""),
+      $("#validationCustom02").val(""),
+      $("#validationCustom03").val("");
   //end onclick
   });
 
