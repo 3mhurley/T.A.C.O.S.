@@ -298,7 +298,7 @@ function closeNav() {
       position: taco.posFmt,
       map: map,
       icon: {                             
-        url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
       }
     });
     console.log(taco.venues[0][6]);
@@ -315,7 +315,7 @@ function closeNav() {
   }
   
   function addMarker(latLng, color) {
-    let url = "http://maps.google.com/mapfiles/ms/icons/";
+    let url = "https://maps.google.com/mapfiles/ms/icons/";
     url += color + "-dot.png";
     
     let marker = new google.maps.Marker({
