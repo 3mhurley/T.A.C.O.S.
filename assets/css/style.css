@@ -1,121 +1,124 @@
-#top{
-    background-color: rgba(238, 238, 90, 0.856);
-    color: RGB(217, 0, 0);
-    border-style:solid;
-    border-color: black;
-    border-radius: 7px;
-    font-weight: bold;
-    opacity: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.jumbotron{
+	width: 850px;
+	background-color: #DCDCDC;
+	color: #F8F8FF (248,248,255);
+	border-style:solid;
+	border-color: black;
+	border-radius: 3px;
+	font-weight: bold;
+	opacity: .7;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-/*ANIME*/
-.ml4 {
-    position: relative;
-    font-weight: 900;
-    font-size: 4.5em;
-  }
+#taco-inputs {
+	width: 850px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color:#DCDCDC;
+	border-style:solid;
+	border-color: black;
+	border-radius: 3px;
+	font-weight: bold;
+	opacity: .7;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
-  .ml4 .letters {
-    position: absolute;
-    margin: auto;
-    left: 0;
-    top: -0.7em;
-    right: 0;
-    opacity: 0; 
-  }
-  /*END OF ANIME*/
+/* ANIME*/ 
+	.ml4 {
+	position: relative;
+	font-weight: 900;
+	font-size: 4.5em;
+}
+
+.ml4 .letters {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	top: -0.7em;
+	right: 0;
+	opacity: 0; 
+} 
+/*end of anime*/
 
 body{
-	
-    background-image: url("../images/g.jpg");
-    background-position: 100%, 0%;
-    
-
+	background-image: url("../images/g.jpg");
+	background-position: 100%, 0%;
 }
+
 
 #smallButton{
-    background-color: darkslategray;;
-    color: white;
-    font-weight: 900;
-    font-style: oblique;
-  }
-  #hugeButton{
-    background-color: darkslategray;
-    color: white;
-    font-weight: 700;
-    font-style: oblique;
+	background-color: black;
+	color: white;
+	font-weight: 700;
+	
 }
+#hugeButton{
+	background-color: black;
+	color: white;
+	font-weight: 700;
+	margin-bottom: 30px;
+	margin-top: 15px;
+} 
 
-#middlebox{
-    background-color:rgb(235, 96, 96);
-    font-weight: bold;
-    /* border-style:solid;
-    border-color: black; */
-    border-radius: 7px;
-    border: 3px solid black;
-    padding: 2rem 1rem;
-    width: 87%;
-    /* margin-bottom: 2rem; */
-    /* margin: 0% -2% 0% -2%; */
-    border-radius: 0.3rem;  
-    opacity: 0.9 ; 
-}
-
-.dropshadow{
-    -webkit-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
--moz-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
-}
-
-#cont{ background-color: RGB(217,0,0);
-    font-weight: bold;
-    /* border-style:solid;
-    border-color: black; */
-    border-radius: 7px;
-    border: 3px solid black;
-    padding: 2rem 1rem;
-    width: 87%;
-    /* margin-bottom: 2rem; */
-    /* margin: 0% -2% 0% -2%; */
-
-}
-
-#midsection{  background-color: rgb(248, 192, 19);
-    color: RGB(217, 0, 0);
-    border-style:solid;
-    border-color: black;
-    border-radius: 7px;
-    font-weight: bold;
-    font-style: oblique;
-
-}
-
-#b{
-    background-color:  RGB(24, 200, 25);
-    color: RGB(217, 0, 0);
-    font-weight: 700;
-    border-style:solid;
-    border-color: black;
-    border-radius: 7px;
-    width: 250px;
-    height: 250px;
-    font-style: oblique;
-
-}
-/* 
-.bg-light {
-    background-color: transparent !important;
-}
-
-#cont > div > div > nav {
-    background-color: transparent !important;
+/* #middlebox{
+	background-color: #F8F8FF (248,248,255);
+	color: #F8F8FF (248,248,255);
+	font-weight: bold;
+	border-radius: 3px;
+	border: 3px solid black;
+	padding: 2rem 1rem;
+	width: 87%;
+	border-radius: 0.3rem;  
+	opacity: 0.8; 
 } */
 
-.navbar.navbar-light.bg-light navbar-expand-sm {
-    background-color: transparent !important;
-    
-}
+/* .dropshadow{
+	-webkit-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
+box-shadow: -5px 21px 12px -11px rgba(0,0,0,0.75);
+} */
+
+/* #cont{ background-color: RGB(217,0,0);
+	font-weight: bold;
+	/* border-style:solid;
+	border-color: black; */
+	/* border-radius: 7px;
+	border: 3px solid black;
+	padding: 2rem 1rem;
+	width: 87%; */
+	/* margin-bottom: 2rem; */
+	/* margin: 0% -2% 0% -2%; */
+
+/* } */ 
+
+/* #midsection{  background-color: rgb(248, 192, 19);
+	color: RGB(217, 0, 0);
+	border-style:solid;
+	border-color: black;
+	border-radius: 7px;
+	font-weight: bold;
+	font-style: oblique;
+
+} */
+
+/* #b{
+	background-color:  RGB(24, 200, 25);
+	color: RGB(217, 0, 0);
+	font-weight: 700;
+	border-style:solid;
+	border-color: black;
+	border-radius: 7px;
+	width: 250px;
+	height: 250px;
+	font-style: oblique;
+
+} */
+
+
 

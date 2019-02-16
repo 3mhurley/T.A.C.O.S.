@@ -8,99 +8,108 @@
     <title>Document</title>
     <!--jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--parsley js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--CSS page 2-->
-    <link rel="stylesheet" href="assets/css/map.css">
+    <!-- <link rel="stylesheet" href="assets/css/map.css"> -->
     <!--ANIME library-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!--firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 
 </head>
-    <body>
+<body>
 
-        <!--column 1-->
-        <div class="container">
-            <div class="row">
-                <div class="col-10">
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <div class="container">
+                    <div class="jumbotron jumbotron-fluid text-center dropshadow top" id="top">
+                            
+                        <!--ANIME-->
+                        <h1 class="ml4">
+                            <span class="letters letters-1">Gimme</span>
+                            <span class="letters letters-2">a</span>
+                            <span class="letters letters-3">TACO!</span>
+                            </h1>
+                        <!--END OF ANIME-->
+        
+                    </div>
                         
                 
-                        <div class="container">
-                                <div class="jumbotron jumbotron-fluid text-center dropshadow" id="top">
-                                        
-                                    <!--ANIME-->
-                                    <h1 class="ml4">
-                                        <span class="letters letters-1">Gimme</span>
-                                        <span class="letters letters-2">a</span>
-                                        <span class="letters letters-3">TACO!</span>
-                                        </h1>
-                                    <!--END OF ANIME-->
-                    
-                                </div>
-                            </div>
-                    
+                        <br>
+                
+                        <div class="container" id="taco-inputs">
+                           
+                            
                             <br>
-                    
-                            <div class="container dropshadow"id="middlebox">
-                                
-                                <br>
-                                
-                                <!-- lucky button -->
-                                <div class="col-md-12 text-center">
-                                    <button type="button" class="btn btn-secondary" id="smallButton">Gimme a Random TACO!</button>
+                            
+                            <!-- lucky button -->
+                            <div class="col-md-12 text-center">
+                                <button type="button" class="btn btn-secondary" id="smallButton">Gimme a Random TACO!</button>
+                            </div>
+                            
+                            <br>
+                            
+                            <!-- text field with user validation--> 
+
+                            
+                            <form class="needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom01">Current Location</label>
+                                        <input type="text" class="form-control" id="validationCustom01" placeholder="Current Location" value="" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom02">Radius</label>
+                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Current Location" value="" required>
+                                        <div class="invalid-feedback">
+                                                Please choose a username.
+                                              </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom03">Price</label>
+                                        <input type="text" class="form-control" id="validationCustom01" placeholder="Price $-$$$" value="" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <br>
-                                
-                                <!-- text field --> 
-                                <form>
-                                    <div class="form-row">
-                                        <div class="col mr-5 ml-5">
-                                            <input type="text" class="form-control input1" id="location" placeholder="Location">
-                                        </div>
-                                        <div class="col mr-5 ml-5">
-                                                <input type="text" class="form-control input1" id="distance" placeholder="Distance">
-                                        </div>
-                                        <div class="col mr-5 ml-5">
-                                            <input type="text" class="form-control input1" id="price" placeholder="Price">
-                                        </div>
-                    
-                                     
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-secondary" id="hugeButton">Nearest TACO!</button>
                                     </div>
                                 </form>
-                                
-                                <br>
-                        
-                                <!-- submit button -->
-                                <div class="col-md-12 text-center">
-                                    <button type="button" class="btn btn-secondary btn-lg" id="hugeButton">Nearest TACO!</button>
-                                </div>
-                    
-                                <br>
-                                
-                            </div>  
+                            <br>
                             
-                            <div class="bottom_container">
-                            </div>
-                
-                <!--end of column 1-->
-                </div>
-                
-                <!--column 2 blank space for background image-->
-                <div class="col-2">        
-                </div>
-                <!--end of column 2-->
-                      
+                        </div>  
+                        
+                        <div class="bottom_container">
+                        </div>
+                    </div>
+            
+            <!--end of column 1-->
             </div>
+            
+            <!-- column 2 blank space for background image-->
+            <div class="col-2">        
+            </div>
+            <!--end of column 2 -->
+                  
         </div>
+    </div>
 
 
 
 
-        
+    
 
 <script src="assets/js/app.js"></script>
 

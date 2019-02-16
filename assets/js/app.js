@@ -83,41 +83,69 @@ function closeNav() {
   var distanceInput = 0;
   var priceInput = 0;
 
+
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          } else
+          form.classList.add('was-validated');
+          window.location="page2a.html";
+          
+        
+        }, false);
+        
+      });
+      
+    }, false);
+    
+  })();
+ 
+
+
+
   //onclick event of submit button on page 1 and 2
-  $("#hugeButton").on("click", function(event) {
-    event.preventDefault(); 
+  // $("#hugeButton").on("click", function(event) {
+  //   event.preventDefault(); 
 
-    //grabbing user input
-    locationInput = $("#location").val().trim();
-    distanceInput = $("#distance").val().trim();
-    priceInput = $("#price").val().trim();
+    // //grabbing user input
+    // locationInput = $("#location").val().trim();
+    // distanceInput = $("#distance").val().trim();
+    // priceInput = $("#price").val().trim();
 
-    console.log(locationInput);
-    console.log(distanceInput);
-    console.log(priceInput);
+    // console.log(locationInput);
+    // console.log(distanceInput);
+    // console.log(priceInput);
 
-    //taco location info for firebase
-    var newTaco = {
-      fireLocation: locationInput,
-      fireDistance: distanceInput,
-      firePrice: priceInput,
-    };
+    // //taco location info for firebase
+    // var newTaco = {
+    //   fireLocation: locationInput,
+    //   fireDistance: distanceInput,
+    //   firePrice: priceInput,
+    // };
 
-    //push to firebase
-    dataRef.ref().push(newTaco);
+    // //push to firebase
+    // dataRef.ref().push(newTaco);
 
-    //clears elements
-    $("#location").val(""),
-    $("#distance").val(""),
-    $("#price").val("");
+    // //clears elements
+    // $("#location").val(""),
+    // $("#distance").val(""),
+    // $("#price").val("");
 
-    //add AJAX call function
+    // //add AJAX call function
 
-    //redirect to page 2
-    $(location).attr('href', 'page2a.html');
+    // //redirect to page 2
+    // $(location).attr('href', 'page2a.html');
 
   //end onclick
-  });
+  //});
 
   //onclick lucky button - random location - no user input 
   $("#smallButton").on("click", function(event) {
