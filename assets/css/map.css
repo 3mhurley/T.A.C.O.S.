@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* body{
     background-image: url("../images/back2.jpg"); 
     background-repeat: repeat;
@@ -10,13 +11,53 @@ body{
     
     
 
+=======
+#new-tacos {
+	width: 850px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding-top: 40px;
+	padding-bottom: 0px;
+	background-color:#DCDCDC;
+	border-style:solid;
+	border-color: black;
+	border-radius: 3px;
+	font-weight: bold;
+	opacity: .7;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
 }
 
-.form-inline{
-    background-color: rgba(238, 238, 90, 0.856);
-
+#results-table {
+    width: 850px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color:#DCDCDC;
+	border-style:solid;
+	border-color: black;
+	border-radius: 3px;
+	font-weight: bold;
+	opacity: .7;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+>>>>>>> 9b26c723dd74207e3eb4ca067576eaa9f42bc5e5
 }
 
+
+
+
+body{
+    background: url("../images/g.jpg");
+    background-size: 1600px, 900px;
+}
+
+<<<<<<< HEAD
 /* .col-md-12.text-center.border */
 .col-md-9.text-center.border
 
@@ -26,12 +67,19 @@ body{
     color: whitesmoke;
     font-weight: 900;
     font-style: oblique;
+=======
+#hugeButton{
+	background-color: black;
+	color: white;
+	font-weight: 700;
+	margin-bottom: 30px;
+	margin-top: 15px;
+} 
+
+form input {
+    display: inline-block;
+    margin: 0px;
+>>>>>>> 9b26c723dd74207e3eb4ca067576eaa9f42bc5e5
 }
 
-button.btn.btn-secondary.my-2.my-sm-0{
-    /* margin-left: 60px; */
-    color: whitesmoke;
-    font-weight: 900;
-    font-style: oblique;
-    
-}
+
