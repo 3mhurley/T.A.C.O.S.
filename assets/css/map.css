@@ -1,6 +1,14 @@
-body{
+/* body{
     background-image: url("../images/back2.jpg"); 
     background-repeat: repeat;
+
+} */
+
+body{
+    background-image: url("../images/g.jpg");
+    background-position: 100%, 0%;
+    
+    
 
 }
 
@@ -9,7 +17,10 @@ body{
 
 }
 
-.col-md-12.text-center.border{
+/* .col-md-12.text-center.border */
+.col-md-9.text-center.border
+
+{
     background-color:rgb(235, 96, 96);
     opacity: 0.9;
     color: whitesmoke;
