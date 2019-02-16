@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Gimme a Taco</title>
     
     <!--jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -79,7 +79,7 @@
 
   <div class="container">
       <div class="row">
-          <div class="col-12">
+          <div class="col-10">
                 <div class="row">
                   <div class="jumbotron jumbotron-fluid text-center dropshadow" id="new-tacos">
                       <form class="needs-validation" novalidate>
@@ -108,29 +108,34 @@
                     </div>
                 </div>
           </div>    
+          
+          
           <div class="row">
-              <div class="map-box" style="width:850px; height:500px;">
-                  <div id="map" style="height:100%;"></div>
+              <div class="col-10">
+                  <div class="row">
+                    <div class="map-box" style="width:850px; height:500px;">
+                      <div id="map" style="height:100%;"></div>
+                    </div>
+                  </div>
               </div>
-            </div>
+          </div>
 
           <br>
           
           <div class="row" id="results-table">
-              <table class="table table-hover" id="resultsTable">
-                <thead>
-                  <tr>
-                    <th scope="col">Nearest TACOS</th>
-                  </tr>
-                </thead>
-                <tbody class="rest-cards">
-                </tbody>
-              </table>
-           </div>
-          
-        </div>
-        <div class="col-2"></div>
-        </div> 
+              <div class="col-10">
+                  <div class="row">
+                    <table class="table table-hover" id="resultsTable">
+                      <thead>
+                      <tr>
+                        <th scope="col">Nearest TACOS</th>
+                      </tr>
+                      </thead>
+                      <tbody class="rest-cards"></tbody>
+                    </table>
+                  </div>
+              </div>
+          </div> 
           
   </div>     
         
