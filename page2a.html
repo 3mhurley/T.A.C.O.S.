@@ -6,20 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- Guegle -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfQ3fFasbNNaSb6Y8SSK16iDsh4_rvvRU&callback=initMap"></script>
-    <!--bluebird-->>
-    <script src="https://cdn.jsdelivr.net/bluebird/latest/bluebird.min.js"></script>
+    
     <!--jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--parsley js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
+    
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!--CSS page 2-->
     <link rel="stylesheet" href="assets/css/map.css">
-    <!--firebase-->
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
     <!--ANIME library-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!--style sidebar-->
@@ -73,7 +67,7 @@
   <!--sidebar-->
   <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+      <a href="#"><img src="assets/images/taco.jpg" style="height:200px; width:200px;"></a>
       <h1 id="sbName">Name</h1>
       <p id="sbRP">Rating/Price</p>
       <a href="#" id="sbURL">URL</a>
@@ -85,20 +79,27 @@
 
   <div class="container">
       <div class="row">
-          <div class="col-10">
+          <div class="col-12">
                 <div class="row">
                   <div class="jumbotron jumbotron-fluid text-center dropshadow" id="new-tacos">
                       <form class="needs-validation" novalidate>
-                          <div class="form-row">
+                          <div class="form-row" id="form-row">
                               <div class="col-md-4 mb-3">
-                                  <input type="text" class="form-control" id="validationCustom01" placeholder="Current Location" value="" required>
+                                  <label for="validationCustom01">Current Location</label>
+                                  <input type="text" class="form-control" id="validationCustom04" value="" required>
+                                  <div class="invalid-feedback"></div>
                               </div>
                               <div class="col-md-4 mb-3">
-                                  <input type="text" class="form-control" id="validationCustom01" placeholder="Current Location" value="" required>
+                                  <label for="validationCustom02">How far will you go for a taco?</label>
+                                  <input type="number" class="form-control" id="validationCustom05" value="" required>
+                                  <div class="invalid-feedback"></div>    
                               </div>
                               <div class="col-md-4 mb-3">
-                                  <input type="text" class="form-control" id="validationCustom01" placeholder="Price $-$$$" value="" required>
+                                  <label for="validationCustom03">Price Range $-$$$</label>
+                                  <input type="text" class="form-control" id="validationCustom06" value="" required>
+                                  <div class="invalid-feedback"></div>
                               </div>
+                          </div>
                               <div class="col-md-12 text-center">
                                   <button type="submit" class="btn btn-secondary btn-lg" id="hugeButton">New TACO Search</button>
                               </div>
@@ -108,7 +109,7 @@
                 </div>
           </div>    
           <div class="row">
-              <div class="map-box" style="width:850px; height:500px;" >
+              <div class="map-box" style="width:850px; height:500px;">
                   <div id="map" style="height:100%;"></div>
               </div>
             </div>
@@ -116,23 +117,19 @@
           <br>
           
           <div class="row" id="results-table">
-              <!-- table -->
-              <!-- <div class="col text-center border"> -->
               <table class="table table-hover" id="resultsTable">
                 <thead>
                   <tr>
                     <th scope="col">Nearest TACOS</th>
-                    <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TACOS</span> -->
                   </tr>
                 </thead>
                 <tbody class="rest-cards">
                 </tbody>
               </table>
-              <!-- </div> -->
-              </div>
-            <!-- </div> -->
-          </div>
-          <div class="col-2"></div>
+           </div>
+          
+        </div>
+        <div class="col-2"></div>
         </div> 
           
   </div>     
